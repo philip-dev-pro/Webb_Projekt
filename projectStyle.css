@@ -3,169 +3,189 @@
    =========================== */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f4f4f4;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #e9ecef; /* Ljusgrå bakgrund för hela sidan */
     line-height: 1.6;
-}
-
-
-h1,
-h2 {
     color: #333;
 }
 
-
-p {
-    color: #ae1818;
+/* Rubriker är mörka som standard för att synas på vit bakgrund */
+h1, h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
 }
 
+/* Textfärg (ändrad från röd till mörkgrå för bättre läsbarhet) */
+p {
+    color: #444;
+}
 
 /* ===========================
-   HEADER
+   HEADER & LOGO
    =========================== */
 header {
     background: #2c3e50;
     color: white;
-    padding: 20px;
+    padding: 40px 20px;
     text-align: center;
 }
 
-
-.logo {
-    width: 80px;
-    display: block;
-    margin: 0 auto 10px;
+/* Tvingar rubriken i headern att vara vit */
+header h1 {
+    color: white;
+    margin: 0;
 }
 
+.logo {
+    width: 100px;
+    display: block;
+    margin: 0 auto 15px;
+}
 
 /* ===========================
-   NAVIGATION
+   NAVIGATION (Krav 1 & 4)
    =========================== */
 nav {
     background: #34495e;
+    position: sticky; /* Menyn stannar kvar högst upp */
+    top: 0;
+    z-index: 1000;
 }
-
 
 nav ul {
     list-style: none;
     margin: 0;
-    padding: 10px;
+    padding: 0;
     display: flex;
     justify-content: center;
-    gap: 20px;
 }
 
+nav li {
+    padding: 15px 20px;
+}
 
 nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    transition: 0.3s;
 }
-
 
 nav a:hover {
-    color: #f1c40f;
+    color: #f1c40f; /* Guldgul färg vid hover */
 }
-
 
 /* ===========================
-   SECTIONS
+   SECTIONS & LAYOUT (Krav 2)
    =========================== */
 section {
-    padding: 20px;
+    padding: 40px;
     max-width: 900px;
-    margin: auto;
+    margin: 30px auto; /* Centrerar sektionerna */
     background: white;
-    margin-top: 20px;
-    border-radius: 8px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Snygg skugga */
 }
 
+/* Special-stil för välkomstrutan på startsidan */
+.hero-section {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+}
+
+.hero-section h1, .hero-section p {
+    color: white;
+}
 
 .content-img {
     width: 100%;
-    max-width: 500px;
+    max-width: 600px;
     display: block;
-    margin: 15px auto;
+    margin: 20px auto;
     border-radius: 8px;
 }
 
-
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #2980b9;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
+/* ===========================
+   ABOUT US - TEAM GRID
+   =========================== */
+.team-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
 }
 
-
-.btn:hover {
-    background: #1f6391;
+.member {
+    text-align: center;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
 }
 
+.member img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Cirkulära bilder */
+    object-fit: cover;
+    border: 3px solid #34495e;
+}
 
 /* ===========================
-   KONTAKTFORMULÄR
+   KONTAKTFORMULÄR (Krav 3)
    =========================== */
 .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
 }
 
-
-.contact-form input,
-.contact-form textarea {
-    padding: 10px;
+.contact-form input, .contact-form textarea {
+    padding: 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-
 .contact-form button {
-    padding: 12px;
+    padding: 15px;
     background: #27ae60;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-weight: bold;
 }
-
-
-.contact-form button:hover {
-    background: #1e8449;
-}
-
 
 /* ===========================
    FOOTER
    =========================== */
 footer {
     text-align: center;
-    padding: 15px;
-    background: #2c3e50;
-    color: white;
-    margin-top: 20px;
+    padding: 25px;
+    background: #2c3e50; /* Mörkblå bakgrund */
+    margin-top: 40px;
 }
 
+/* Denna rad tvingar texten inuti footern att bli vit */
+footer p {
+    color: white !important; 
+    margin: 0;
+    font-size: 0.9rem;
+}
 
 /* ===========================
-   RESPONSIV DESIGN
+   RESPONSIV DESIGN (Krav 4)
    =========================== */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     nav ul {
         flex-direction: column;
-        text-align: center;
+        align-items: center;
     }
-
-
-    .logo {
-        width: 60px;
-    }
-
-
+    
     section {
-        padding: 15px;
+        margin: 15px;
+        padding: 20px;
     }
 }
