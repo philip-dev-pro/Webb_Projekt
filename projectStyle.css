@@ -99,18 +99,30 @@ section {
     color: white;
 }
 
-/* Styling för bilderna i länders-korten */
+/* --- STIL FÖR LOGGAN PÅ STARTSIDAN (Den stora globen i vita rutan) --- */
+.content-img {
+    width: 100%;
+    max-width: 400px;      /* Ändra detta för att göra globen på startsidan lagom stor */
+    height: auto;          /* VIKTIGT: Låt höjden vara automatisk här så den inte blir utsträckt */
+    display: block;
+    margin: 20px auto;
+    border-radius: 0;      /* Ingen ram på loggan */
+    border: none;          /* Ingen kant på loggan */
+    background: none;      /* Ingen bakgrundsfärg på loggan */
+}
+
+/* --- STIL FÖR FLAGGORNA PÅ INFORMATIONSSIDAN --- */
 .info-card img {
     width: 100%;
-    max-width: 350px;      /* Minskad från 500px till 350px */
-    height: 200px;          /* Minskad från 300px till 200px */
-    object-fit: contain;    /* Ser till att hela flaggan syns utan att klippas */
+    max-width: 300px;      /* Flaggorna är mindre */
+    height: 180px;         /* Flaggorna har en fast höjd */
+    object-fit: contain;   /* Ser till att hela flaggan syns */
     background-color: #fdfdfd; 
     display: block;
-    margin: 0 auto 20px;    /* Centrerar bilden */
+    margin: 0 auto 20px;
     border-radius: 8px;
-    padding: 10px;          /* Ger en snygg vit ram runt flaggan */
-    border: 1px solid #eee; /* En tunn grå kant */
+    padding: 10px;
+    border: 1px solid #eee;
 }
 
 /* ===========================
