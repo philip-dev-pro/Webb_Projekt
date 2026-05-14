@@ -37,14 +37,14 @@ header h1 {
 }
 
 .logo {
-    width: 250px;         /* Ökat från 100px till 250px */
+    width: 250px;         
     display: block;
     margin: 0 auto 10px;  /* Centrerar bilden och ger lite luft neråt */
     height: auto;         /* Gör så att bilden inte blir utsträckt */
 }
 
 /* ===========================
-   NAVIGATION (Krav 1 & 4)
+   NAVIGATION 
    =========================== */
 nav {
     background: #34495e;
@@ -77,7 +77,7 @@ nav a:hover {
 }
 
 /* ===========================
-   SECTIONS & LAYOUT (Krav 2)
+   SECTIONS & LAYOUT 
    =========================== */
 section {
     padding: 40px;
@@ -99,16 +99,22 @@ section {
     color: white;
 }
 
-.content-img {
+/* Styling för bilderna i länders-korten */
+.info-card img {
     width: 100%;
-    max-width: 600px;
+    max-width: 350px;      /* Minskad från 500px till 350px */
+    height: 200px;          /* Minskad från 300px till 200px */
+    object-fit: contain;    /* Ser till att hela flaggan syns utan att klippas */
+    background-color: #fdfdfd; 
     display: block;
-    margin: 20px auto;
+    margin: 0 auto 20px;    /* Centrerar bilden */
     border-radius: 8px;
+    padding: 10px;          /* Ger en snygg vit ram runt flaggan */
+    border: 1px solid #eee; /* En tunn grå kant */
 }
 
 /* ===========================
-   ABOUT US - FÖRBÄTTRAD DESIGN
+   ABOUT US 
    =========================== */
 
 /* Gör hela texten i visionen lite större och luftigare */
@@ -128,10 +134,10 @@ section {
 
 .member {
     text-align: center;
-    background: #fdfdfd;       /* Lite ljusare grå/vit */
+    background: #fdfdfd;       
     padding: 30px;             /* Mer luft inuti kortet */
     border-radius: 15px;
-    width: 280px;              /* Ökat från 200px till 280px för att fylla ut */
+    width: 280px;              
     box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* En mycket mjuk skugga */
     border: 1px solid #eee;    /* En tunn ram för att markera kortet */
     transition: transform 0.3s ease;
@@ -143,7 +149,7 @@ section {
 }
 
 .member img {
-    width: 160px;              /* Ökat från 120px till 160px */
+    width: 160px;              
     height: 160px;
     border-radius: 50%; 
     object-fit: cover;
@@ -164,7 +170,7 @@ section {
 }
 
 /* ===========================
-   KONTAKTFORMULÄR (Krav 3)
+   KONTAKTFORMULÄR 
    =========================== */
 .contact-form {
     display: flex;
@@ -206,7 +212,7 @@ footer p {
 }
 
 /* ===========================
-   RESPONSIV DESIGN (Krav 4)
+   RESPONSIV DESIGN 
    =========================== */
 @media (max-width: 768px) {
     /* 1. Menyn blir en lista istället för en rad (lättare att klicka på mobilen) */
@@ -220,23 +226,23 @@ footer p {
         padding: 10px; /* Ger mer plats för fingrarna att klicka */
     }
 
-    /* 2. Sektionerna tar upp mer plats på bredden på små skärmar */
+    /* Sektionerna tar upp mer plats på bredden på små skärmar */
     section {
         margin: 15px 10px;
         padding: 20px;
     }
 
-    /* 3. LOGOTYPEN - Denna rad fixar storleken på mobilen! */
+    /*  - Denna rad fixar storleken på mobilen! */
     .logo {
         width: 160px; /* Den krymper från 250px (dator) till 160px (mobil) */
     }
 
-    /* 4. Rubriken i headern blir lite mindre så den inte tar för mycket plats */
+    /* Rubriken i headern blir lite mindre så den inte tar för mycket plats */
     header h1 {
         font-size: 1.5rem;
     }
 
-    /* 5. Välkomstrutan (hero) får lite mindre text för att passa skärmen */
+    /* Välkomstrutan (hero) får lite mindre text för att passa skärmen */
     .hero-section h1 {
         font-size: 1.4rem;
     }
