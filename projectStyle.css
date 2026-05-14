@@ -15,7 +15,7 @@ h1, h2 {
     margin-bottom: 15px;
 }
 
-/* Textfärg (ändrad från röd till mörkgrå för bättre läsbarhet) */
+/* Textfärg */
 p {
     color: #444;
 }
@@ -99,11 +99,11 @@ section {
     color: white;
 }
 
-/* --- STIL FÖR LOGGAN PÅ STARTSIDAN (Den stora globen i vita rutan) --- */
+/* --- STIL FÖR LOGGAN PÅ STARTSIDAN  --- */
 .content-img {
     width: 100%;
-    max-width: 400px;      /* Ändra detta för att göra globen på startsidan lagom stor */
-    height: auto;          /* VIKTIGT: Låt höjden vara automatisk här så den inte blir utsträckt */
+    max-width: 400px;      
+    height: auto;          
     display: block;
     margin: 20px auto;
     border-radius: 0;      /* Ingen ram på loggan */
@@ -114,7 +114,7 @@ section {
 /* --- STIL FÖR FLAGGORNA PÅ INFORMATIONSSIDAN --- */
 .info-card img {
     width: 100%;
-    max-width: 300px;      /* Flaggorna är mindre */
+    max-width: 300px;      
     height: 180px;         /* Flaggorna har en fast höjd */
     object-fit: contain;   /* Ser till att hela flaggan syns */
     background-color: #fdfdfd; 
@@ -254,7 +254,7 @@ footer p {
         font-size: 1.5rem;
     }
 
-    /* Välkomstrutan (hero) får lite mindre text för att passa skärmen */
+    /* Välkomstrutan får lite mindre text för att passa skärmen */
     .hero-section h1 {
         font-size: 1.4rem;
     }
