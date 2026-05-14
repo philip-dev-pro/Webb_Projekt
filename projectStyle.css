@@ -1,21 +1,24 @@
 /* ===========================
-   GLOBAL STYLING
+   GLOBAL STYLING & RUBRIKER
    =========================== */
 body {
     margin: 0;
     font-family: 'Segoe UI', Arial, sans-serif;
-    background: #e9ecef; /* Ljusgrå bakgrund för hela sidan */
+    background: #e9ecef;
     line-height: 1.6;
     color: #333;
 }
 
-/* Rubriker är mörka som standard för att synas på vit bakgrund */
-h1, h2 {
+/* Rubriker är mörka i vita sektioner, men vita i mörka sektioner */
+h1, h2, h3 {
     color: #2c3e50;
     margin-bottom: 15px;
 }
 
-/* Textfärg */
+header h1, .hero-section h1, .hero-section p, footer p {
+    color: white !important;
+}
+
 p {
     color: #444;
 }
@@ -25,22 +28,15 @@ p {
    =========================== */
 header {
     background: #2c3e50;
-    color: white;
     padding: 40px 20px;
     text-align: center;
-}
-
-/* Tvingar rubriken i headern att vara vit */
-header h1 {
-    color: white;
-    margin: 0;
 }
 
 .logo {
     width: 250px;         
     display: block;
-    margin: 0 auto 10px;  /* Centrerar bilden och ger lite luft neråt */
-    height: auto;         /* Gör så att bilden inte blir utsträckt */
+    margin: 0 auto 10px;
+    height: auto;
 }
 
 /* ===========================
@@ -48,7 +44,7 @@ header h1 {
    =========================== */
 nav {
     background: #34495e;
-    position: sticky; /* Menyn stannar kvar högst upp */
+    position: sticky;
     top: 0;
     z-index: 1000;
 }
@@ -61,9 +57,7 @@ nav ul {
     justify-content: center;
 }
 
-nav li {
-    padding: 15px 20px;
-}
+nav li { padding: 15px 20px; }
 
 nav a {
     color: white;
@@ -72,51 +66,38 @@ nav a {
     transition: 0.3s;
 }
 
-nav a:hover {
-    color: #f1c40f; /* Guldgul färg vid hover */
-}
+nav a:hover { color: #f1c40f; }
 
 /* ===========================
-   SECTIONS & LAYOUT 
+   SECTIONS & BILDER
    =========================== */
 section {
     padding: 40px;
     max-width: 900px;
-    margin: 30px auto; /* Centrerar sektionerna */
+    margin: 30px auto;
     background: white;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Snygg skugga */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-/* Special-stil för välkomstrutan på startsidan */
 .hero-section {
     background: #2c3e50;
-    color: white;
     text-align: center;
 }
 
-.hero-section h1, .hero-section p {
-    color: white;
-}
-
-/* --- STIL FÖR LOGGAN PÅ STARTSIDAN  --- */
 .content-img {
     width: 100%;
     max-width: 400px;      
     height: auto;          
     display: block;
     margin: 20px auto;
-    border-radius: 0;      /* Ingen ram på loggan */
-    border: none;          /* Ingen kant på loggan */
-    background: none;      /* Ingen bakgrundsfärg på loggan */
 }
 
-/* --- STIL FÖR FLAGGORNA PÅ INFORMATIONSSIDAN --- */
 .info-card img {
     width: 100%;
     max-width: 300px;      
-    height: 180px;         /* Flaggorna har en fast höjd */
-    object-fit: contain;   /* Ser till att hela flaggan syns */
+    height: 180px;
+    object-fit: contain;
     background-color: #fdfdfd; 
     display: block;
     margin: 0 auto 20px;
@@ -126,20 +107,12 @@ section {
 }
 
 /* ===========================
-   Om oss 
+   OM OSS & TEAM
    =========================== */
-
-/* Gör hela texten i visionen lite större och luftigare */
-.about-container p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    margin-bottom: 30px;
-}
-
 .team-grid {
     display: flex;
-    justify-content: center; /* Centrerar korten */
-    gap: 40px;               /* Mer avstånd mellan korten */
+    justify-content: center;
+    gap: 40px;
     flex-wrap: wrap;
     margin-top: 40px;
 }
@@ -147,42 +120,27 @@ section {
 .member {
     text-align: center;
     background: #fdfdfd;       
-    padding: 30px;             /* Mer luft inuti kortet */
+    padding: 30px;
     border-radius: 15px;
     width: 280px;              
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* En mycket mjuk skugga */
-    border: 1px solid #eee;    /* En tunn ram för att markera kortet */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
     transition: transform 0.3s ease;
 }
 
-.member:hover {
-    transform: translateY(-10px); /* Korten lyfter när man håller musen över */
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
+.member:hover { transform: translateY(-10px); }
 
 .member img {
     width: 160px;              
     height: 160px;
     border-radius: 50%; 
     object-fit: cover;
-    border: 5px solid #2c3e50; /* Tjockare ram runt bilden */
+    border: 5px solid #2c3e50;
     margin-bottom: 20px;
 }
 
-.member h3 {
-    font-size: 1.4rem;         /* Större namn */
-    margin-bottom: 10px;
-    color: #2c3e50;
-}
-
-.member p {
-    font-size: 1rem;
-    color: #666;               /* Lite ljusare text för titeln */
-    margin: 0;
-}
-
 /* ===========================
-   KONTAKTFORMULÄR 
+   KONTAKT & FOOTER
    =========================== */
 .contact-form {
     display: flex;
@@ -206,56 +164,21 @@ section {
     font-weight: bold;
 }
 
-/* ===========================
-   FOOTER
-   =========================== */
 footer {
     text-align: center;
     padding: 25px;
-    background: #2c3e50; /* Mörkblå bakgrund */
+    background: #2c3e50;
     margin-top: 40px;
-}
-
-/* Denna rad tvingar texten inuti footern att bli vit */
-footer p {
-    color: white !important; 
-    margin: 0;
-    font-size: 0.9rem;
 }
 
 /* ===========================
    RESPONSIV DESIGN 
    =========================== */
 @media (max-width: 768px) {
-    /* 1. Menyn blir en lista istället för en rad (lättare att klicka på mobilen) */
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        padding: 10px 0;
-    }
-    
-    nav li {
-        padding: 10px; /* Ger mer plats för fingrarna att klicka */
-    }
-
-    /* Sektionerna tar upp mer plats på bredden på små skärmar */
-    section {
-        margin: 15px 10px;
-        padding: 20px;
-    }
-
-    /*  - Denna rad fixar storleken på mobilen! */
-    .logo {
-        width: 160px; /* Den krymper från 250px (dator) till 160px (mobil) */
-    }
-
-    /* Rubriken i headern blir lite mindre så den inte tar för mycket plats */
-    header h1 {
-        font-size: 1.5rem;
-    }
-
-    /* Välkomstrutan får lite mindre text för att passa skärmen */
-    .hero-section h1 {
-        font-size: 1.4rem;
-    }
+    nav ul { flex-direction: column; align-items: center; padding: 10px 0; }
+    nav li { padding: 10px; }
+    section { margin: 15px 10px; padding: 20px; }
+    .logo { width: 160px; }
+    header h1 { font-size: 1.5rem; }
+    .hero-section h1 { font-size: 1.4rem; }
 }
